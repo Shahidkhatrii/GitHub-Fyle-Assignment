@@ -1,0 +1,288 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main-container {
+    background-color: #ececec;
+    min-height: 100vh;
+    height: 100%;
+    padding: 0 20vw 0 20vw;
+}
+
+.main {
+    background-color: #ffffff;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+    gap: 5rem;
+}
+
+#card-container {
+    width: 75%;
+    min-height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px !important;
+}
+
+.card-body {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+
+}
+
+.card_header {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.1rem;
+}
+
+.profile-img-container {
+    position: relative;
+    flex: 0.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    align-self: center;
+    height: 6rem;
+    width: 6rem;
+    border: 2px solid rgb(53, 53, 53);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.hstack {
+    margin-bottom: 1rem
+}
+
+.hstack .p-1 {
+    max-height: 100px !important;
+    /* Set your desired maximum height */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    padding: 0.2rem 0.5rem !important;
+    border-radius: 5px !important;
+}
+
+.RepoBtn {
+    align-self: flex-end;
+}
+
+
+/* Profile page CSS */
+.profile-main-container {
+    background-color: #ececec;
+    min-height: 100vh;
+    height: 100%;
+    padding: 0 20vw 0 20vw;
+}
+
+.profile-main {
+    background-color: #ffffff;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-header {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.2px solid rgb(214, 214, 214);
+    padding: 10px;
+}
+
+.profile-header-img {
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-header-img img {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    border: 2px solid rgb(53, 53, 53);
+}
+
+.profile-header-content {
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.HTML_link {
+    font-size: smaller;
+    margin-top: 1rem;
+}
+
+.Repo-list-container {
+    height: 100%;
+    width: 100%;
+
+}
+
+.Repo-list {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 49.5% 49.5%;
+    gap: 1%;
+    padding: 1rem;
+}
+
+.Repo-card {
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.Repo-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Repo-list-container nav {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1300px) {
+    .main-container {
+        padding: 0;
+    }
+
+    .profile-main-container {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    #card-container {
+        width: 100%;
+    }
+
+    .card-body {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+    }
+
+    .card_header {
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.1rem;
+    }
+
+    .profile-img {
+        flex: none;
+        align-self: center;
+        height: 6rem;
+        width: 5rem;
+        border: 2px solid rgb(53, 53, 53);
+
+    }
+
+    .profile-header {
+        height: 40vh;
+
+    }
+
+    .Repo-list {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 15px;
+    }
+
+    .profile-header {
+        height: 45vh;
+        flex-direction: column;
+    }
+
+    .profile-header-img {
+        flex: none;
+    }
+
+    .profile-header-content {
+        flex: none;
+        align-items: center;
+    }
+
+    .follow-stack {
+        justify-content: center !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 13px;
+    }
+
+    .profile-header {
+        height: 50vh;
+        flex-direction: column;
+
+    }
+}
