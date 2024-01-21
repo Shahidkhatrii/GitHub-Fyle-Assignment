@@ -24,7 +24,7 @@ const fetchUserProfile = async (username) => {
 
 const displayUserProfile = (userProfile) => {
   const profileHeader = document.querySelector(".profile-header");
-  console.log(userProfile);
+
   const profileHeaderContent = `<div class="profile-header-img">
               <img src="${userProfile.avatar_url}" alt="profile_img">
               <p class="HTML_link"><i class="fa-solid fa-link"></i> <a href="${
@@ -82,7 +82,11 @@ const fetchAndDisplayRepositories = async (page, username) => {
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
-    console.log(data, "data");
+    if (currentPage === 1 && data.length === 0) {
+      RepoList.innerHTML = `User doesn't have any repository yet!.`;
+      throw new Error("User doesn't have any repositories yet!");
+    }
+
     clearRepositories();
     RepoList.innerHTML = "";
     displayRepositories(data);
@@ -103,7 +107,7 @@ const updatePaginationButtons = (noPageCur, perPage) => {
   if (noPageCur > 0) {
     for (
       let i = 1;
-      i <= (noPageCur >= 10 ? currentPage + 1 : currentPage);
+      i <= (noPageCur >= perPage ? currentPage + 1 : currentPage);
       i++
     ) {
       const currentPageBtn = createPageButton(i, i);
@@ -111,7 +115,7 @@ const updatePaginationButtons = (noPageCur, perPage) => {
     }
   }
 
-  if (noPageCur >= 10) {
+  if (noPageCur >= perPage) {
     const nextPageBtn = createPageButton("Next", currentPage + 1);
     paginationElement.appendChild(nextPageBtn);
   }
@@ -136,7 +140,6 @@ const displayRepositories = (data) => {
   data.map((repo) => {
     const topicLength = repo.topics.length;
     const card = document.createElement("a");
-    console.log(card);
     card.classList.add("card");
     card.classList.add("Repo-card");
     card.href = repo.html_url;
