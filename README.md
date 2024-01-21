@@ -1,7 +1,16 @@
 
 # GitHub-Fyle-Assignment
+## Live Hosted Link
 
+You can access a live version of GitHub-Fyle-Assignment on the following link:
 
+[Live Demo](https://shahidkhatrii.github.io/GitHub-Fyle-Assignment/)
+
+Feel free to explore and test the application in your web browser.
+
+##Screenshots
+![Screenshot_20240121_031844](https://github.com/Shahidkhatrii/GitHub-Fyle-Assignment/assets/104732343/46454397-5bcc-43b0-ad17-65b05fb3126d)
+![Screenshot_20240121_031826](https://github.com/Shahidkhatrii/GitHub-Fyle-Assignment/assets/104732343/ce8078b8-e46c-4796-916e-318ea23a340d)
 
 ## Table of Contents
 
@@ -16,7 +25,7 @@
 - [License](#license)
 
 ## Overview
-GitExplorer is a web application that allows users to explore GitHub profiles and repositories with ease. It provides a simple interface to search for GitHub users and view their profiles, including basic information and a list of public repositories.
+GitHub-Fyle-Assignment is a web application that allows users to explore GitHub profiles and repositories with ease. It provides a simple interface to search for GitHub users and view their profiles, including basic information and a list of public repositories.
 
 ## Features
 
