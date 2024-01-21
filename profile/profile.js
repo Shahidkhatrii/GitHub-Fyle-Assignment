@@ -72,6 +72,10 @@ const handlePageChange = (page) => {
 };
 
 const fetchAndDisplayRepositories = async (page, username) => {
+  const RepoList = document.querySelector(".Repo-list");
+  RepoList.innerHTML = `<div class="loader-container"><div class="spinner-grow" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div></div>`;
   const perPage = 10;
   const apiUrl = `${GITHUB_API_URL}users/${username}/repos?type=public&page=${page}&per_page=${perPage}&sort=`;
 
@@ -80,6 +84,7 @@ const fetchAndDisplayRepositories = async (page, username) => {
     const data = await response.json();
     console.log(data, "data");
     clearRepositories();
+    RepoList.innerHTML = "";
     displayRepositories(data);
     updatePaginationButtons(data.length, perPage);
   } catch (error) {

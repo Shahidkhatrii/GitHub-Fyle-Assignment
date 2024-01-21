@@ -50,16 +50,25 @@ const getUser = async (username) => {
 searchBtn.addEventListener("click", (e) => {
   e.preventDefault();
   console.log("clicked", searchInput.value);
+  performSearch();
+});
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    console.log("clicked", searchInput.value);
+    performSearch();
+  }
+});
+const performSearch = () => {
   if (!searchInput.value) {
     return;
   }
   cardContainer.innerHTML = `<div class="spinner-grow" role="status">
-                                <span class="visually-hidden">Loading...</span>
-                             </div>`;
+                              <span class="visually-hidden">Loading...</span>
+                           </div>`;
   getUser(searchInput.value);
   searchInput.value = "";
-});
-
+};
 const handleRepoBtn = (username) => {
   const repoBtn = document.querySelector("#RepositoriesBtn");
   repoBtn.addEventListener("click", (e) => {
