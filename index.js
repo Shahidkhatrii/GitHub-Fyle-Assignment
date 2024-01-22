@@ -4,7 +4,7 @@ const searchInput = document.querySelector("#search");
 const searchBtn = document.querySelector("#button-addon2");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const data = JSON.parse(window.localStorage.getItem("userData") || "");
+  const data = JSON.parse(window.localStorage.getItem("userData"));
   if (data) {
     displayProfileCard(data);
     handleRepoBtn(data.login);
@@ -12,9 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cardContainer.innerHTML = `<div><h1>Welcome to GitHub Search</h1>
 <p>Explore GitHub users and repositories with ease. Use the search bar above to find your favorite developers, discover interesting projects, or explore trending repositories.</p>
 
-<p>Simply enter a GitHub username and start exploring the vibrant GitHub community.</p></div>
-
-                          `;
+<p>Simply enter a GitHub username and start exploring the vibrant GitHub community.</p></div>`;
   }
 });
 
@@ -40,25 +38,27 @@ const getUser = async (username) => {
 
 const displayProfileCard = (data) => {
   const card = `<div class="card w-100">
-  <div class="card-body">
-      <div class="profile-img-container">
-      <img src="${data.avatar_url}" 
-        class="profile-img" alt="profile"></div>
-      <div class="card_header">
-          <h5 class="card-title">${data.name ? data.name : ""}</h5>
-          <p class="card-text">${data.bio ? data.bio : ""}</p>
-          <div class="hstack gap-2">
-              <div class="p-1 text-bg-secondary">Followers: ${
-                data?.followers
-              }</div>
-              <div class="p-1 text-bg-secondary">Following: ${
-                data?.following
-              }</div>
-          </div>
-          <a href="#" class="RepoBtn btn btn-primary" id="RepositoriesBtn" ><i class="fa-solid fa-book-bookmark"></i> Repositories</a>
-      </div>
-  </div>
-</div>`;
+                  <div class="card-body">
+                      <div class="profile-img-container">
+                      <img src="${data.avatar_url}" 
+                        class="profile-img" alt="profile"></div>
+                      <div class="card_header">
+                          <h5 class="card-title">${
+                            data.name ? data.name : ""
+                          }</h5>
+                          <p class="card-text">${data.bio ? data.bio : ""}</p>
+                          <div class="hstack gap-2">
+                              <div class="p-1 text-bg-secondary">Followers: ${
+                                data?.followers
+                              }</div>
+                              <div class="p-1 text-bg-secondary">Following: ${
+                                data?.following
+                              }</div>
+                          </div>
+                          <a href="#" class="RepoBtn btn btn-primary" id="RepositoriesBtn" ><i class="fa-solid fa-book-bookmark"></i> Repositories</a>
+                      </div>
+                  </div>
+                </div>`;
   cardContainer.innerHTML = card;
 };
 
