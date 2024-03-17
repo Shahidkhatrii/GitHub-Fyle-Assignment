@@ -1,8 +1,8 @@
 
-# GitHub-Fyle-Assignment
+# GitHub Explorer
 ## Live Hosted Link
 
-You can access a live version of GitHub-Fyle-Assignment on the following link:
+You can access a live version of GitHub Explorer on the following link:
 
 [Live Demo](https://shahidkhatrii.github.io/GitHub-Fyle-Assignment/)
 
@@ -25,7 +25,7 @@ Feel free to explore and test the application in your web browser.
 - [License](#license)
 
 ## Overview
-GitHub-Fyle-Assignment is a web application that allows users to explore GitHub profiles and repositories with ease. It provides a simple interface to search for GitHub users and view their profiles, including basic information and a list of public repositories.
+GitHub Explorer is a web application that allows users to explore GitHub profiles and repositories with ease. It provides a simple interface to search for GitHub users and view their profiles, including basic information and a list of public repositories.
 
 ## Features
 
@@ -80,7 +80,3 @@ Contributions are welcome! If you have suggestions, bug reports, or would like t
 3. Commit your changes (`git commit -m 'Add some feature'`).
 4. Push to the branch (`git push origin feature/your-feature`).
 5. Open a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
